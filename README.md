@@ -1,13 +1,15 @@
 # tmux-workspaces
 
-I simple workspace manager based on tmux sessions and fzf.
+A simple workspace manager based on tmux sessions and fzf.
+
 It provides a helper to create/select workspaces with four default windows:
-1 - code;
-2 - server;
-3 - git;
-4 - ai.
+code, server, git and ai.
 
 ![image](./img/tmux-windows.png)
+
+tmux-workspaces will open a fzf popup screen where you can type the name of new session or select
+an existing one. If you are creating a new session, fzf will prompt you the default directory for
+all windows.
 
 ## Dependencies
 
