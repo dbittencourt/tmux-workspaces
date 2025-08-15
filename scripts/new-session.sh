@@ -4,10 +4,10 @@ set -eo pipefail
 SEARCH_ROOT="$HOME"
 
 sessions=$(tmux list-sessions -F '#S' 2>/dev/null || true)
-[ -z "$sessions" ] && sessions="(no sessions found)"
+[ -z "$sessions" ] && sessions="(no workspaces found)"
 
 set +e
-fzf_result=$(echo "$sessions" | fzf --prompt="Type or select session name: " \
+fzf_result=$(echo "$sessions" | fzf --prompt="Type or select workspace: " \
   --print-query --height=10 --layout=reverse)
 set -e
 
